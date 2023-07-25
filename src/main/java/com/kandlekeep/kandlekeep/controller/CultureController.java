@@ -19,12 +19,9 @@ public class CultureController {
 
 	@GetMapping
 	public ModelAndView index(Model model) {
-
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("/culture/list");
-
+		mv.setViewName("/cultures/list");
 		mv.addObject("list", cultureService.findAll());
-
 		return mv;
 	}
 
