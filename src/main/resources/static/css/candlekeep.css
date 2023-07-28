@@ -20,3 +20,11 @@ body {
 .float_right {
 	float: right;
 }
+
+.flag {
+	width: 20px;
+	height: auto;
+	margin-top: 10px;
+	
+}
+

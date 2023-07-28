@@ -7,8 +7,10 @@
 <body>
 	<div th:replace="~{base :: menu-top}"></div>
  
-    <img th:src="@{/images/logo_01.png}" class="logo_emblem_bg rounded mx-auto d-block"/> 	
- 	
+ 	<h2 data-th-text="#{welcome}"></h2>
+    
+    <img th:src="@{/images/logo_01.png}" class="logo_emblem_bg rounded mx-auto d-block"/> 
+    
     <div th:replace="~{base :: jscript}"></div>
 	<script>
     	var URL = '[[@{/}]]api/';

@@ -36,14 +36,16 @@
 
 					<li class="nav-item"><a
 						th:classappend="${activePage} == 'menuItemCultures' ? 'active'"
-						class="nav-link" th:href="@{/cultures}">Cultures</a></li>
+						class="nav-link" th:href="@{/cultures}">
+							<span data-th-text="#{menu_culture}" />
+						</a></li>
 
 					<li class="nav-item"><a
 						th:classappend="${activePage} == 'mnuListMov' ? 'active'"
 						class="nav-link" th:href="@{/swagger-ui.html}" target="_blank">Swagger</a></li>
 
 
-					<li class="nav-item"><a class="nav-link" th:href="@{/login}">Login
+					<li class="nav-item"><a class="nav-link" th:href="@{/login}"><span data-th-text="#{menu_login}" />
 							&nbsp; <i class="fa fa-database fa" aria-hidden="true"
 							th:style="${isProduction} ? 'color:green' : 'color:red'"
 							th:title="${isProduction} ? 'Production DB' : 'Development DB'"></i>
@@ -61,12 +63,14 @@
 								class="dropdown-item" th:href="@{/admins/}">Admins</a></li>
 							<li><hr class="dropdown-divider"></li>
 							<li><a class="dropdown-item" th:href="@{/logout}">Logout</a></li>
-
 						</ul></li>
 
-					<li class="nav-item"><a class="nav-link"> <i
-							class="fa fa-database fa" aria-hidden="true"></i>
-					</a></li>
+					<li>
+						<a href="?language=en"><img th:src="@{/images/flag_eua.png}" class="flag" /></a>
+						<a href="?language=ptbr"><img th:src="@{/images/flag_brasil.png}" class="flag" /></a>
+						<a href="?language=it"><img th:src="@{/images/flag_italia.png}" class="flag" /></a>
+						<a href="?language=ger"><img th:src="@{/images/flag_german.png}" class="flag" /></a>
+					</li>
 
 				</ul>
 
